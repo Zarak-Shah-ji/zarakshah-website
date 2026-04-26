@@ -13,8 +13,8 @@ export default async function WritingPage() {
 
   return (
     <div className="py-12">
-      <h1 className="mb-2 text-lg font-medium">Writing</h1>
-      <p className="mb-10 text-base text-muted">
+      <h1 className="mb-2 text-2xl font-medium">Writing</h1>
+      <p className="mb-10 text-lg text-muted">
         Posts live on{" "}
         <a
           href="https://medium.com/@zarak-shah"
@@ -28,7 +28,7 @@ export default async function WritingPage() {
       </p>
 
       {posts.length === 0 ? (
-        <p className="text-base text-muted">
+        <p className="text-lg text-muted">
           {/* TODO: feed unreachable at build — retry on next revalidation */}
           Couldn&rsquo;t reach the feed. Try again in an hour.
         </p>
@@ -47,12 +47,12 @@ export default async function WritingPage() {
                 className="block"
               >
                 <div className="flex items-baseline justify-between gap-4">
-                  <h2 className="text-base font-medium leading-snug">
+                  <h2 className="text-lg font-medium leading-snug">
                     {post.title}
                   </h2>
                   <time
                     dateTime={post.date.toISOString()}
-                    className="shrink-0 text-sm text-muted"
+                    className="shrink-0 text-base text-muted"
                   >
                     {formatPostDate(post.date)}
                   </time>

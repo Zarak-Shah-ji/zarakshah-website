@@ -9,9 +9,9 @@ export default function Home() {
           <img
             src="/Work_dp.jpg"
             alt="Zarak Shah"
-            width={96}
-            height={96}
-            className="mb-6 h-24 w-24 rounded-full object-cover"
+            width={104}
+            height={104}
+            className="mb-6 h-[104px] w-[104px] rounded-full object-cover"
           />
           <p>
             I&rsquo;m Zarak. Senior Data Scientist at BMW Group, based in the
@@ -22,7 +22,7 @@ export default function Home() {
             work &mdash; clinical EHR operations, automotive safety, and the
             unglamorous infrastructure underneath both.
           </p>
-          <p className="text-muted">
+          <p style={{ color: "var(--muted)" }}>
             Most of what I make ends up in production at companies that care
             more about reliability than novelty.
           </p>
@@ -33,9 +33,9 @@ export default function Home() {
           <img
             src="/life_dp.jpg"
             alt="Zarak Shah"
-            width={96}
-            height={96}
-            className="mb-6 h-24 w-24 rounded-full object-cover"
+            width={104}
+            height={104}
+            className="mb-6 h-[104px] w-[104px] rounded-full object-cover"
           />
           <p>Hi, I&rsquo;m Zarak. Outside of the day job I tinker.</p>
           <p>
@@ -43,27 +43,27 @@ export default function Home() {
             agent, an Instagram bot that I keep meaning to retire. Small tools
             that automate the parts of life I don&rsquo;t want to do myself.
           </p>
-          <p className="text-muted">
+          <p style={{ color: "var(--muted)" }}>
             I write occasionally about what I&rsquo;ve learned &mdash; usually
             after I&rsquo;ve broken something twice.
           </p>
         </div>
       </section>
 
-      <section className="mt-16 grid gap-3 text-base">
+      <section className="mt-16 grid gap-3 text-xl">
         <Link
           href="/writing"
           className="flex items-baseline justify-between border-t border-rule pt-3"
         >
           <span>Writing</span>
-          <span className="text-muted">notes &amp; posts</span>
+          <span style={{ color: "var(--muted)" }}>notes &amp; posts</span>
         </Link>
         <Link
           href="/projects"
           className="flex items-baseline justify-between border-t border-rule pt-3"
         >
           <span>Projects</span>
-          <span className="text-muted">things I&rsquo;ve shipped</span>
+          <span style={{ color: "var(--muted)" }}>things I&rsquo;ve shipped</span>
         </Link>
       </section>
     </div>

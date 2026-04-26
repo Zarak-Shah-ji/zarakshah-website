@@ -4,19 +4,19 @@
 [data-mode="work"] {
   --background: rgb(148, 137, 121);
   --surface: rgb(168, 156, 139);
-  --foreground: rgb(28, 25, 23);
-  --muted: rgb(74, 67, 56);
-  --rule: rgb(122, 111, 94);
-  --accent: rgb(28, 25, 23);
+  --foreground: #ffffff;
+  --muted: rgba(255, 255, 255, 0.6);
+  --rule: rgba(255, 255, 255, 0.25);
+  --accent: #ffffff;
 }
 
 [data-mode="life"] {
   --background: rgb(223, 208, 184);
   --surface: rgb(236, 224, 201);
-  --foreground: rgb(28, 25, 23);
-  --muted: rgb(110, 98, 76);
-  --rule: rgb(201, 184, 157);
-  --accent: rgb(28, 25, 23);
+  --foreground: #ffffff;
+  --muted: rgba(255, 255, 255, 0.65);
+  --rule: rgba(255, 255, 255, 0.3);
+  --accent: #ffffff;
 }
 
 @theme inline {
@@ -29,15 +29,15 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: 20px;
 }
 
 html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Mont Blanc ExtraLight", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -66,7 +66,7 @@ a:hover {
 .prose {
   max-width: 38rem;
   line-height: 1.7;
-  font-size: 1.0625rem;
+  font-size: 1.1rem;
 }
 
 .prose p + p {
@@ -74,7 +74,7 @@ a:hover {
 }
 
 .prose h2 {
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 600;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
@@ -94,7 +94,7 @@ a:hover {
   padding: 1rem;
   border-radius: 0.5rem;
   overflow-x: auto;
-  font-size: 0.9375rem;
+  font-size: 0.95rem;
   margin: 1.25rem 0;
 }
 
