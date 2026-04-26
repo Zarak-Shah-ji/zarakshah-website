@@ -9,8 +9,8 @@ export const metadata: Metadata = {
 export default function ProjectsPage() {
   return (
     <div className="py-12">
-      <h1 className="mb-2 text-base font-medium">Projects</h1>
-      <p className="mb-10 text-sm text-muted">
+      <h1 className="mb-2 text-lg font-medium">Projects</h1>
+      <p className="mb-10 text-base text-muted">
         A short list. Most live on{" "}
         <a
           href="https://github.com/Zarak-Shah-ji"
@@ -37,12 +37,12 @@ export default function ProjectsPage() {
               className="group block"
             >
               <div className="flex items-baseline justify-between gap-4">
-                <h2 className="font-mono text-sm">{project.name}</h2>
+                <h2 className="font-mono text-base">{project.name}</h2>
                 <span className="text-xs uppercase tracking-wide text-muted">
-                  {project.mode === "personal" ? "personal" : "work"}
+                  {project.mode === "life" ? "life" : "work"}
                 </span>
               </div>
-              <p className="mt-1 text-sm text-muted">{project.blurb}</p>
+              <p className="mt-1 text-base text-muted">{project.blurb}</p>
             </a>
           </li>
         ))}

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
 };
 
-const prePaintScript = `(()=>{try{const m=localStorage.getItem("mode");if(m==="personal"||m==="professional")document.documentElement.dataset.mode=m}catch(e){}})();`;
+const prePaintScript = `(()=>{try{const m=localStorage.getItem("mode");if(m==="life"||m==="work")document.documentElement.dataset.mode=m}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -28,7 +28,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-mode="professional" className="h-full">
+    <html lang="en" data-mode="work" className="h-full">
       <head>
         <script dangerouslySetInnerHTML={{ __html: prePaintScript }} />
       </head>

@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="mt-24 flex items-center justify-between border-t border-rule py-8 text-xs text-muted">
+    <footer className="mt-24 flex items-center justify-between border-t border-rule py-8 text-sm text-muted">
       <span>&copy; {new Date().getFullYear()} Zarak Shah</span>
       <div className="flex items-center gap-5">
         <a

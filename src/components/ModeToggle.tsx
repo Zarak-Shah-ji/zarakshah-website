@@ -8,34 +8,30 @@ export function ModeToggle() {
     <div
       role="group"
       aria-label="Switch site mode"
-      className="inline-flex items-center text-xs tracking-wide uppercase"
+      className="inline-flex items-center text-sm tracking-wide uppercase"
     >
       <button
         type="button"
-        onClick={() => setMode("professional")}
-        aria-pressed={mode === "professional"}
+        onClick={() => setMode("work")}
+        aria-pressed={mode === "work"}
         className={
-          mode === "professional"
-            ? "text-foreground"
-            : "text-muted hover:opacity-100"
+          mode === "work" ? "text-foreground" : "text-muted hover:opacity-100"
         }
       >
-        Professional
+        Work
       </button>
       <span aria-hidden className="mx-2 text-muted">
         /
       </span>
       <button
         type="button"
-        onClick={() => setMode("personal")}
-        aria-pressed={mode === "personal"}
+        onClick={() => setMode("life")}
+        aria-pressed={mode === "life"}
         className={
-          mode === "personal"
-            ? "text-foreground"
-            : "text-muted hover:opacity-100"
+          mode === "life" ? "text-foreground" : "text-muted hover:opacity-100"
         }
       >
-        Personal
+        Life
       </button>
     </div>
   );

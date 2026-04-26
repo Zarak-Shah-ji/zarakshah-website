@@ -36,14 +36,20 @@ mdx-components.tsx       required for @next/mdx
 
 ## Modes
 
-The site has two modes: **professional** (dark) and **personal** (light). The
-toggle in the nav switches both the visual theme and which projects/posts are
-shown. Mode is persisted in `localStorage` and applied before paint to avoid
-flash.
+The site has two modes: **work** (warm tan, `rgb(148,137,121)`) and **life**
+(warm cream, `rgb(223,208,184)`). The toggle in the nav switches both the
+palette and which projects/posts are visible. Mode is persisted in
+`localStorage` and applied before paint to avoid flash.
 
-To add a post to a specific mode, edit `PERSONAL_TITLES` in `src/lib/medium.ts`.
-By default everything from the Medium feed is treated as `professional` unless
-its title appears in that set.
+To add a post to a specific mode, edit `LIFE_TITLES` in `src/lib/medium.ts`.
+By default everything from the Medium feed is treated as `work` unless its
+title appears in that set.
+
+## Display pictures
+
+`/public/Work_dp.jpg` (shown in Work mode) and `/public/life_dp.jpg` (shown
+in Life mode). Square images, displayed as 96×96 circles. Update the file
+extensions in `src/app/page.tsx` if you use `.png` / `.webp`.
 
 ## TODO
 

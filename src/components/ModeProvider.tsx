@@ -38,7 +38,7 @@ export function ModeProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   const toggle = useCallback(() => {
-    setMode(mode === "professional" ? "personal" : "professional");
+    setMode(mode === "work" ? "life" : "work");
   }, [mode, setMode]);
 
   return (

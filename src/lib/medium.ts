@@ -12,14 +12,14 @@ export type MediumPost = {
 
 const FEED_URL = "https://medium.com/feed/@zarak-shah";
 
-// Posts the author has explicitly placed in "personal" — everything else is professional.
-const PERSONAL_TITLES = new Set<string>([
+// Posts the author has explicitly placed in "life" — everything else is work.
+const LIFE_TITLES = new Set<string>([
   "Renting from Airport Parking Facilities: A Unique Approach",
   "How to Identify Your Life Goals and Make Them a Reality",
 ]);
 
 function classify(title: string): Mode {
-  return PERSONAL_TITLES.has(title) ? "personal" : "professional";
+  return LIFE_TITLES.has(title) ? "life" : "work";
 }
 
 type RawItem = {
