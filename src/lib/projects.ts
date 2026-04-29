@@ -12,7 +12,7 @@ export const projects: Project[] = [
     name: "yeam-agent-system",
     blurb:
       "Five-agent EHR system. SOAP note drafting, claim scrubbing, billing appeals, NL analytics.",
-    href: "https://yeamagentsystem.vercel.app/",
+    href: "https://yeam.ai/",
     mode: "work",
   },
   {
