@@ -1,0 +1,33 @@
+---
+title: "Leetcode Patterns"
+date: "2025-08-20"
+mode: "work"
+description: "A catalog of recognizable DSA patterns: binary search, dynamic programming, DFS/BFS, monotonic stacks, and more."
+---
+
+Pattern recognition accelerates problem-solving. Most interview problems are variations of a small set of underlying patterns. Recognizing the pattern tells you which algorithm to reach for.
+
+![Decision flowchart for selecting the right algorithm pattern based on input type](/writing/leetcode-patterns/patterns-flowchart.png)
+
+## Sorted Input
+
+- Apply **binary search** for efficient lookups
+- Use the **two-pointer** technique for pairs or segments
+
+## Unsorted Input
+
+- **Dynamic programming** for counting ways or optimization problems
+- **Backtracking** for all possibilities and combinations
+- **Trie** for prefix matching
+- **Hash map / set** for quick element lookup
+- **Monotonic stack** or **sliding window** for continuous max/min values
+
+## Graph or Tree Input
+
+- **DFS** for exploring all paths (when the shortest path is not required)
+- **BFS** for shortest path or fewest steps
+- For binary trees, **DFS** when targeting specific depths or levels
+
+## Linked List Input
+
+- **Slow/fast pointers** or `prev` / `dummy` pointers for specific list operations

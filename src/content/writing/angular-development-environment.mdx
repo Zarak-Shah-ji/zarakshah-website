@@ -1,0 +1,77 @@
+---
+title: "Setting Up Your Angular Development Environment on Windows"
+date: "2023-09-04"
+mode: "work"
+description: "Step-by-step installation guide covering Node.js, Angular CLI, VS Code, and creating your first Angular application."
+---
+
+A complete guide for getting Angular running on Windows from scratch.
+
+## Prerequisites
+
+- Windows 10 or later
+- Administrator access
+
+## Step 1: Install Node.js and npm
+
+Download the LTS version from [nodejs.org](https://nodejs.org/). The installer includes npm.
+
+Verify the installation:
+
+```bash
+node -v
+npm -v
+```
+
+## Step 2: Install Angular CLI
+
+```bash
+npm install -g @angular/cli
+```
+
+Verify:
+
+```bash
+ng version
+```
+
+## Step 3: Set Up VS Code
+
+Download [Visual Studio Code](https://code.visualstudio.com/). Install the **Angular Language Service** extension for template autocompletion, inline errors, and go-to-definition support.
+
+## Step 4: Create Your First App
+
+```bash
+ng new my-angular-app
+cd my-angular-app
+```
+
+The CLI will prompt you to configure routing and stylesheet format. The defaults are fine for getting started.
+
+## Step 5: Run the App
+
+```bash
+ng serve
+```
+
+Open `http://localhost:4200/` in your browser. The app reloads automatically on file changes.
+
+## Step 6: Explore the Project Structure
+
+Your main work lives in `src/app/`:
+
+- **Components** — UI building blocks with a `.ts`, `.html`, and `.css` file each
+- **Modules** — Groups of related components and services
+- **Templates** — HTML with Angular binding syntax
+
+## Step 7: Additional Tools
+
+- **Angular DevTools** — Browser extension for inspecting the component tree and profiling change detection
+- **Angular Material** — Component library: [material.angular.io](https://material.angular.io/)
+- **RxJS** — Reactive programming library used throughout Angular: [rxjs.dev](https://rxjs.dev/)
+
+## Resources
+
+- Official docs: [angular.io](https://angular.io/)
+- Angular Material: [material.angular.io](https://material.angular.io/)
+- RxJS: [rxjs.dev](https://rxjs.dev/)

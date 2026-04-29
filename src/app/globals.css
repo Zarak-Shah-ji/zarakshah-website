@@ -2,21 +2,24 @@
 
 :root,
 [data-mode="work"] {
-  --background: rgb(148, 137, 121);
-  --surface: rgb(168, 156, 139);
-  --foreground: #ffffff;
-  --muted: rgba(255, 255, 255, 0.6);
-  --rule: rgba(255, 255, 255, 0.25);
-  --accent: #ffffff;
+  --background: rgb(38, 35, 32);
+  --surface: rgb(52, 48, 44);
+  --foreground: rgb(240, 235, 225);
+  --muted: rgba(240, 235, 225, 0.5);
+  --accent: rgb(210, 175, 110);
+  --rule: rgba(210, 175, 110, 0.3);
+  --font-body: "Mont Blanc ExtraLight", ui-sans-serif, system-ui,
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
 }
 
 [data-mode="life"] {
   --background: rgb(223, 208, 184);
   --surface: rgb(236, 224, 201);
-  --foreground: #ffffff;
-  --muted: rgba(255, 255, 255, 0.65);
-  --rule: rgba(255, 255, 255, 0.3);
-  --accent: #ffffff;
+  --foreground: rgb(42, 31, 20);
+  --muted: rgba(42, 31, 20, 0.5);
+  --accent: rgb(178, 103, 78);
+  --rule: rgba(178, 103, 78, 0.3);
+  --font-body: var(--font-lora), Georgia, "Times New Roman", serif;
 }
 
 @theme inline {
@@ -30,17 +33,25 @@
 
 html {
   font-size: 20px;
+  transition: background 350ms ease, color 350ms ease;
+}
+
+body {
+  transition: background 350ms ease, color 350ms ease;
 }
 
 html,
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Mont Blanc ExtraLight", ui-sans-serif, system-ui,
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-  font-feature-settings: "ss01", "cv11";
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+}
+
+[data-mode="work"] body,
+[data-mode="work"] {
+  font-feature-settings: "ss01", "cv11";
 }
 
 ::selection {
@@ -101,4 +112,9 @@ a:hover {
 .prose pre code {
   background: none;
   padding: 0;
+}
+
+@keyframes dp-ripple {
+  from { transform: scale(1);    opacity: 0.7; }
+  to   { transform: scale(1.55); opacity: 0;   }
 }

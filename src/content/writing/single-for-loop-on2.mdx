@@ -1,0 +1,47 @@
+---
+title: "Single for loop with O(n²) time complexity"
+date: "2025-09-15"
+mode: "work"
+description: "Why using the `in` operator on Python lists inside a loop creates hidden O(n²) behavior, and how sets fix it."
+---
+
+Look at this code for problem 217. Contains Duplicate:
+
+```python
+def containsDuplicate(nums: list[int]) -> bool:
+  map = [] * len(nums)
+  for num in nums:
+    if num in map: return True
+    map.append(num)
+  return False
+```
+
+The solution passes 65/77 test cases and appears linear, but encounters Time Limit Exceeded (TLE) errors — surprising for a single loop.
+
+## Key Issues
+
+**1. Flawed Initialization**
+
+`map = [] * len(nums)` results in an empty list. Multiplying an empty list by any number yields an empty list, not a pre-sized array.
+
+**2. Inefficient Search**
+
+The `in` operator on lists performs a linear scan with O(n) complexity, checking each element sequentially.
+
+**3. Combined Inefficiency**
+
+The outer loop runs n times; the `in` operator inside performs up to n comparisons per iteration, resulting in O(n²) overall complexity.
+
+## Solution Using Sets
+
+```python
+def containsDuplicate(nums: list[int]) -> bool:
+    seen = set()
+    for num in nums:
+        if num in seen:  # O(1) lookup
+            return True
+        seen.add(num)   # O(1) add
+    return False
+```
+
+Sets use hash tables for O(1) average-case lookups and insertions, reducing overall complexity to O(n).

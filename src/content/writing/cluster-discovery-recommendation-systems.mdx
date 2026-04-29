@@ -1,0 +1,68 @@
+---
+title: "Unveiling Patterns: The Art of Cluster Discovery in Recommendation Systems"
+date: "2023-12-21"
+mode: "work"
+description: "Phase 1 of a recommendation system architecture: using TF-IDF, PCA, and K-Medoids to discover user session clusters."
+---
+
+Cluster discovery forms Phase 1 of a three-phase recommendation system architecture:
+
+- **Phase 1:** Use clustering to discover session categories
+- **Phase 2:** Build classifiers to categorize new sessions
+- **Phase 3:** Run a daily classification pipeline
+
+The core problem: categorizing clickstream data into distinct user sessions so that downstream recommendations are context-aware.
+
+## Approach I: Session-Focused Categorization
+
+The goal is to represent each session as a vector, then group similar sessions together.
+
+![Pipeline diagram: from raw sessions through TF-IDF, PCA, and K-Medoids to labeled clusters](/writing/cluster-discovery-recommendation-systems/session-pipeline.png)
+
+**Pipeline:**
+
+1. Sample user sessions from a single day
+2. Filter out actions that appear in fewer than 5% of sessions (noise reduction)
+3. Calculate TF-IDF to normalize action frequency across sessions
+4. Normalize session weight vectors
+5. Apply PCA for dimensionality reduction
+6. Run K-Medoids clustering
+7. Evaluate using cosine, Jaccard, and Euclidean distance measures
+
+![Resulting session cluster visualization](/writing/cluster-discovery-recommendation-systems/session-clusters.png)
+
+K-Medoids was chosen over K-Means because it selects actual data points as cluster centers (medoids), making clusters interpretable and robust to outliers.
+
+## Approach II: User-Focused Categorization
+
+Instead of treating sessions as bags of actions, this approach extracts behavioral features per user:
+
+![User feature matrix used for clustering](/writing/cluster-discovery-recommendation-systems/user-features.png)
+
+- **Sequence Length:** Proxy for engagement level
+- **Unique Page Views:** Captures exploration breadth
+- **Click Frequency:** Indicates browsing speed and decisiveness
+- **Action Completion Rates:** Distinguishes active bidders from casual browsers
+- **Time on Specific Pages:** Signals interest depth
+- **Car Characteristics:** Reveals budget and category preferences
+
+## Cluster Labels
+
+The resulting clusters map to recognizable user archetypes:
+
+- Active Bidders
+- Interested Browsers
+- Price Comparison Shoppers
+- Informational Seekers
+- Casual Browsing
+- Serious Shoppers
+- Frequent Bidders
+- Detailed Viewers
+- Quick Interactors
+- Inquisitive Clickers
+- Infrequent Visitors
+- Auction Enthusiasts
+- Deal Seekers
+- Research-Oriented Users
+
+Each label becomes a feature fed into the Phase 2 classifier, enabling the recommendation engine to serve context-appropriate content.

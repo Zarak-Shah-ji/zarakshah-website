@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { projects } from "@/lib/projects";
+import { Divider } from "@/components/Divider";
 
 export const metadata: Metadata = {
   title: "Projects",
@@ -27,14 +28,14 @@ export default function ProjectsPage() {
         {projects.map((project) => (
           <li
             key={project.name}
-            className="border-t border-rule pt-4"
             data-show={project.mode === "both" ? undefined : project.mode}
           >
+            <Divider />
             <a
               href={project.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block"
+              className="group block pt-4"
             >
               <div className="flex items-baseline justify-between gap-4">
                 <h2 className="font-mono text-lg">{project.name}</h2>

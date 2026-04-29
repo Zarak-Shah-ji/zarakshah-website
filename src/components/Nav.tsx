@@ -7,13 +7,11 @@ export function Nav() {
       <Link
         href="/"
         className="text-2xl font-medium tracking-tight"
-        aria-label="Home — Zarak Shah"
+        aria-label="Home"
       >
-        Zarak Shah
+        Home
       </Link>
       <nav className="flex items-baseline gap-6 text-lg text-muted">
-        <Link href="/writing">Writing</Link>
-        <Link href="/projects">Projects</Link>
         <ModeToggle />
       </nav>
     </header>

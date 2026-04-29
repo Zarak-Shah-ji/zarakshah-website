@@ -1,0 +1,64 @@
+---
+title: "A Framework to Solve Dynamic Programming Problems"
+date: "2025-08-27"
+mode: "work"
+description: "Three core components — subproblems, base cases, and recurrence relations — with memoization and bottom-up templates."
+---
+
+Dynamic programming problems can be solved using three main components.
+
+## 1. Identify the Subproblem
+
+Define what `dp[i]` or `dp[i][j]` represents (state definition):
+
+- **Coin Change:** `dp[i]` = "number of ways to make amount i"
+- **Decode Ways:** `dp[i]` = "number of ways to decode substring of length i"
+
+## 2. Establish Base Cases
+
+Explain the simplest inputs:
+
+- **Coin Change:** `dp[0] = 0` (no coins needed to make zero)
+- **Decode Ways:** `dp[0] = 1` (one way to decode an empty string)
+
+## 3. Formulate a Recurrence Relation
+
+Build larger subproblems from smaller ones:
+
+- **Coin Change:** To make amount j, add coin c to combinations making j−c: `dp[j] += dp[j-c]`
+- **Decode Ways:** Either decode the last character as a single digit (add `dp[i-1]`) or the last two as a two-digit number (add `dp[i-2]`)
+
+## Code Templates
+
+```python
+# Top-down without memoization: O(2^N) time, O(N) space
+def fib_top_down(n):
+    if n == 0: return 0
+    if n == 1: return 1
+    return fib_top_down(n-1) + fib_top_down(n-2)
+
+# Top-down with memoization: O(N) time, O(N) space
+def fib_top_down_memo(n, memo={}):
+    if n in memo: return memo[n]
+    if n == 0: return 0
+    if n == 1: return 1
+    memo[n] = fib_top_down_memo(n-1, memo) + fib_top_down_memo(n-2, memo)
+    return memo[n]
+
+# Bottom-up array: O(N) time, O(N) space
+def fib_bottom_up_array(n):
+    dp = [0] * (n + 1)
+    dp[1] = 1
+    for i in range(2, n + 1):
+        dp[i] = dp[i - 1] + dp[i - 2]
+    return dp[n]
+
+# Bottom-up two variables: O(N) time, O(1) space
+def fib_bottom_up(n):
+    prev2, prev1 = 0, 1
+    for i in range(2, n + 1):
+        fib = prev2 + prev1
+        prev2 = prev1
+        prev1 = fib
+    return prev1
+```
