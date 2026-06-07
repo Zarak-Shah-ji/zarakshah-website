@@ -11,8 +11,8 @@ export default function Home() {
             I&rsquo;m building as co-founder of Yeam.ai and OpenBio.
           </p>
           <p>
-            I come from a hard software engineering and AI background, and I
-            build ML systems and agents for things that have to actually work,
+            I come from a software engineering and AI background, and I build
+            ML systems and agents for things that have to actually work,
             the unglamorous infrastructure most products quietly run on.
           </p>
           <p style={{ color: "var(--muted)" }}>
@@ -23,12 +23,15 @@ export default function Home() {
         </div>
 
         <div data-show="life">
-          <p>Outside of the day job I tinker.</p>
+          <p>I tinker and I train.</p>
           <p>
             Over time I&rsquo;ve built cold-outreach pipelines, an agent that
-            generates LinkedIn carousels, an Instagram bot I keep meaning to
-            retire. Small tools for the parts of life I&rsquo;d rather not do
-            myself.
+            generates LinkedIn carousels, a bot I keep meaning to retire. Small
+            tools for the parts of life I&rsquo;d rather not do myself.
+          </p>
+          <p>
+            I train at the gym and sometimes film the journey to share on
+            Instagram — progress, workouts, and behind-the-scenes.
           </p>
           <p style={{ color: "var(--muted)" }}>
             I write occasionally about what I&rsquo;ve learned, usually
