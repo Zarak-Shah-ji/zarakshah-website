@@ -12,22 +12,28 @@ export default function WritingPage() {
   const posts = getAllPosts();
 
   return (
-    <div className="py-12">
-      <h1 className="mb-2 text-2xl font-medium">Writing</h1>
-      <p className="mb-10 text-lg text-muted">
+    <div className="py-10">
+      <h1 className="reveal mb-2 text-xl font-medium">Writing</h1>
+      <p
+        className="reveal mb-10 text-base text-muted"
+        style={{ "--reveal-delay": "80ms" } as React.CSSProperties}
+      >
         Thoughts on data science, engineering, and life.
       </p>
 
       {posts.length === 0 ? (
-        <p className="text-lg text-muted">No posts yet.</p>
+        <p className="text-base text-muted">No posts yet.</p>
       ) : (
-        <ul className="grid gap-6">
+        <ul className="stagger grid gap-6">
           {posts.map((post) => (
-            <li key={post.slug} data-show={post.mode}>
+            <li key={post.slug} data-show={post.mode} className="row">
               <Divider />
-              <Link href={`/writing/${post.slug}`} className="block pt-4">
+              <Link
+                href={`/writing/${post.slug}`}
+                className="row-link block pt-4"
+              >
                 <div className="flex items-baseline justify-between gap-4">
-                  <h2 className="text-lg font-medium leading-snug">
+                  <h2 className="row-title text-base font-medium leading-snug">
                     {post.title}
                   </h2>
                   <time

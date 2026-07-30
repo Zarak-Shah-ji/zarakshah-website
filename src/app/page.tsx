@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="pb-12">
       <section className="prose">
-        <div data-show="work">
+        <div data-show="work" className="stagger">
           <p>
             Advanced AI Scientist at HP. The work I care about most is what
             I&rsquo;m building as co-founder of Yeam.ai and OpenBio.
@@ -22,7 +22,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div data-show="life">
+        <div data-show="life" className="stagger">
           <p>I tinker and I train.</p>
           <p>
             Over time I&rsquo;ve built cold-outreach pipelines, an agent that
@@ -40,23 +40,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-16 text-xl">
-        <Divider />
-        <Link
-          href="/writing"
-          className="flex items-baseline justify-between py-3"
-        >
-          <span>Writing</span>
-          <span style={{ color: "var(--muted)" }}>notes &amp; posts</span>
-        </Link>
-        <Divider />
-        <Link
-          href="/projects"
-          className="flex items-baseline justify-between py-3"
-        >
-          <span>Projects</span>
-          <span style={{ color: "var(--muted)" }}>things I&rsquo;ve shipped</span>
-        </Link>
+      <section
+        className="reveal mt-14 text-lg"
+        style={{ "--reveal-delay": "320ms" } as React.CSSProperties}
+      >
+        <div className="row">
+          <Divider />
+          <Link
+            href="/writing"
+            className="row-link flex items-baseline justify-between py-3"
+          >
+            <span className="row-title">Writing</span>
+            <span style={{ color: "var(--muted)" }}>
+              notes &amp; posts <span className="row-arrow">&rarr;</span>
+            </span>
+          </Link>
+        </div>
+        <div className="row">
+          <Divider />
+          <Link
+            href="/projects"
+            className="row-link flex items-baseline justify-between py-3"
+          >
+            <span className="row-title">Projects</span>
+            <span style={{ color: "var(--muted)" }}>
+              things I&rsquo;ve shipped <span className="row-arrow">&rarr;</span>
+            </span>
+          </Link>
+        </div>
       </section>
     </div>
   );
