@@ -7,18 +7,12 @@ export default function Home() {
       <section className="prose">
         <div data-show="work">
           <p>
-            Advanced AI Scientist at HP. The work I care about most is what
-            I&rsquo;m building as co-founder of Yeam.ai and OpenBio.
+            Engineer &amp; entrepreneur. Currently working on schematic traces
+            at HP and denied claims at Yeam.
           </p>
           <p>
-            I come from a software engineering and AI background, and I build
-            ML systems and agents for things that have to actually work,
-            the unglamorous infrastructure most products quietly run on.
-          </p>
-          <p style={{ color: "var(--muted)" }}>
-            Most of what I make ends up in production. I like finding a better
-            way to solve a problem, then making sure it holds up once it&rsquo;s
-            real.
+            In past lives I&rsquo;ve done data science at BMW, co-founded
+            OpenBio, and graduated valedictorian.
           </p>
         </div>
 
