@@ -17,20 +17,20 @@ export function ProfileToggle() {
   }
 
   return (
-    <div className="reveal flex items-center gap-6" style={{ "--reveal-delay": "80ms" } as React.CSSProperties}>
+    <div className="flex items-center gap-6">
       <div className="relative w-fit">
         <button
           type="button"
           onClick={handleClick}
           aria-label={`Switch to ${mode === "work" ? "life" : "work"} mode`}
-          className="group cursor-pointer select-none rounded-full border-2 border-accent/40 p-[3px] transition-[border-color,transform] duration-300 hover:scale-[1.04] hover:border-accent/70 active:scale-[0.98]"
+          className="cursor-pointer select-none rounded-full border-2 border-accent/40 p-[3px] transition-[border-color,transform] duration-200 hover:scale-[1.03] hover:border-accent/70"
         >
-          <div className="relative h-[7rem] w-[7rem] overflow-hidden rounded-full">
+          <div className="relative h-[136px] w-[136px] overflow-hidden rounded-full">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/work_dp.jpeg"
               alt="Zarak Shah"
-              className={`absolute inset-0 h-full w-full rounded-full object-cover transition-[opacity,transform] duration-500 group-hover:scale-105 ${
+              className={`absolute inset-0 h-full w-full rounded-full object-cover transition-opacity duration-300 ${
                 mode === "work" ? "opacity-100" : "opacity-0"
               }`}
             />
@@ -38,7 +38,7 @@ export function ProfileToggle() {
             <img
               src="/life_dp.jpeg"
               alt="Zarak Shah"
-              className={`absolute inset-0 h-full w-full rounded-full object-cover transition-[opacity,transform] duration-500 group-hover:scale-105 ${
+              className={`absolute inset-0 h-full w-full rounded-full object-cover transition-opacity duration-300 ${
                 mode === "life" ? "opacity-100" : "opacity-0"
               }`}
             />
@@ -55,12 +55,10 @@ export function ProfileToggle() {
       <div className="flex flex-col justify-center">
         {mode === "work" ? (
           <span
-            key="work"
-            className="reveal"
             style={{
               fontFamily: "var(--font-playfair)",
               fontStyle: "italic",
-              fontSize: "2rem",
+              fontSize: "2.1rem",
               lineHeight: 1.15,
               letterSpacing: "-0.01em",
             }}
@@ -69,11 +67,9 @@ export function ProfileToggle() {
           </span>
         ) : (
           <span
-            key="life"
-            className="reveal"
             style={{
               fontFamily: "var(--font-caveat)",
-              fontSize: "2.6rem",
+              fontSize: "2.8rem",
               lineHeight: 1.1,
             }}
           >

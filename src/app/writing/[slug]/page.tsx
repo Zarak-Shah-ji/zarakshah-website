@@ -36,21 +36,16 @@ export default async function PostPage({
   });
 
   return (
-    <article className="py-10">
-      <header className="reveal mb-9">
-        <h1 className="mb-2 text-xl font-medium leading-tight">
+    <article className="py-12">
+      <header className="mb-10">
+        <h1 className="mb-2 text-2xl font-medium leading-tight">
           {post.frontmatter.title}
         </h1>
         <time dateTime={post.frontmatter.date} className="text-base text-muted">
           {formatPostDate(post.frontmatter.date)}
         </time>
       </header>
-      <div
-        className="prose reveal"
-        style={{ "--reveal-delay": "140ms" } as React.CSSProperties}
-      >
-        {content}
-      </div>
+      <div className="prose">{content}</div>
     </article>
   );
 }
