@@ -37,7 +37,7 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 12px;
   scroll-behavior: smooth;
   transition: background 350ms ease, color 350ms ease;
 }
