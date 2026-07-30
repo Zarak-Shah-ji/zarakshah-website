@@ -37,7 +37,7 @@
 }
 
 html {
-  font-size: 17px;
+  font-size: 15px;
   scroll-behavior: smooth;
   transition: background 350ms ease, color 350ms ease;
 }
@@ -228,7 +228,7 @@ a:hover {
 .prose {
   max-width: 38rem;
   line-height: 1.7;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .prose p + p {
@@ -236,7 +236,7 @@ a:hover {
 }
 
 .prose h2 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   margin-top: 2.5rem;
   margin-bottom: 0.75rem;
