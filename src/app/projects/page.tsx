@@ -46,7 +46,7 @@ export default function ProjectsPage() {
                   {project.name}
                   <span className="row-arrow ml-2 text-sm">&#8599;</span>
                 </h2>
-                <span className="shrink-0 text-xs uppercase tracking-wide text-muted">
+                <span className="shrink-0 text-sm uppercase tracking-wide text-muted">
                   {project.mode === "life" ? "life" : "work"}
                 </span>
               </div>

@@ -41,7 +41,7 @@ export default async function PostPage({
         <h1 className="mb-2 text-xl font-medium leading-tight">
           {post.frontmatter.title}
         </h1>
-        <time dateTime={post.frontmatter.date} className="text-sm text-muted">
+        <time dateTime={post.frontmatter.date} className="text-base text-muted">
           {formatPostDate(post.frontmatter.date)}
         </time>
       </header>

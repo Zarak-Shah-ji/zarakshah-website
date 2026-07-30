@@ -14,7 +14,7 @@ export function ModeToggle() {
     <div
       role="group"
       aria-label="Switch site mode"
-      className="inline-flex items-center rounded-full border border-accent/35 p-[3px] text-xs tracking-wide uppercase transition-colors duration-300 hover:border-accent/60"
+      className="inline-flex items-center rounded-full border border-accent/35 p-[3px] text-sm tracking-wide uppercase transition-colors duration-300 hover:border-accent/60"
     >
       {OPTIONS.map((option) => (
         <button

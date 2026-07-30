@@ -13,7 +13,7 @@ export function Footer() {
   return (
     <div className="row mt-24">
       <Divider />
-      <footer className="flex items-center justify-between py-7 text-sm text-muted">
+      <footer className="flex items-center justify-between py-7 text-base text-muted">
         <span>&copy; {new Date().getFullYear()} Zarak Shah</span>
         <div className="flex items-center gap-5">
           {links.map((link) => (

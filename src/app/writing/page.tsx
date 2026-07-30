@@ -38,13 +38,13 @@ export default function WritingPage() {
                   </h2>
                   <time
                     dateTime={post.date}
-                    className="shrink-0 text-sm text-muted"
+                    className="shrink-0 text-base text-muted"
                   >
                     {formatPostDate(post.date)}
                   </time>
                 </div>
                 {post.description && (
-                  <p className="mt-1 text-sm text-muted line-clamp-2">
+                  <p className="mt-1 text-base text-muted line-clamp-2">
                     {post.description}
                   </p>
                 )}
