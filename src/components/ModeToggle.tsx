@@ -1,6 +1,12 @@
 "use client";
 
 import { useMode } from "./ModeProvider";
+import type { Mode } from "@/lib/mode";
+
+const OPTIONS: { value: Mode; label: string }[] = [
+  { value: "work", label: "Work" },
+  { value: "life", label: "Life" },
+];
 
 export function ModeToggle() {
   const { mode, setMode } = useMode();
@@ -8,32 +14,23 @@ export function ModeToggle() {
     <div
       role="group"
       aria-label="Switch site mode"
-      className="inline-flex items-center rounded-full border border-accent/35 p-[3px] text-sm tracking-wide uppercase"
+      className="inline-flex items-center rounded-full border border-accent/35 p-[3px] text-xs tracking-wide uppercase transition-colors duration-300 hover:border-accent/60"
     >
-      <button
-        type="button"
-        onClick={() => setMode("work")}
-        aria-pressed={mode === "work"}
-        className={`rounded-full px-3 py-1 transition-all duration-200 ${
-          mode === "work"
-            ? "bg-accent text-background"
-            : "text-muted hover:opacity-80"
-        }`}
-      >
-        Work
-      </button>
-      <button
-        type="button"
-        onClick={() => setMode("life")}
-        aria-pressed={mode === "life"}
-        className={`rounded-full px-3 py-1 transition-all duration-200 ${
-          mode === "life"
-            ? "bg-accent text-background"
-            : "text-muted hover:opacity-80"
-        }`}
-      >
-        Life
-      </button>
+      {OPTIONS.map((option) => (
+        <button
+          key={option.value}
+          type="button"
+          onClick={() => setMode(option.value)}
+          aria-pressed={mode === option.value}
+          className={`cursor-pointer rounded-full px-3 py-1 transition-all duration-300 ease-out active:scale-95 ${
+            mode === option.value
+              ? "bg-accent text-background"
+              : "text-muted hover:text-foreground"
+          }`}
+        >
+          {option.label}
+        </button>
+      ))}
     </div>
   );
 }
