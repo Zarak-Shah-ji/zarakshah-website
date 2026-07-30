@@ -8,11 +8,28 @@ export default function Home() {
         <div data-show="work">
           <p>
             Engineer &amp; entrepreneur. Currently working on schematic traces
-            at HP and denied claims at Yeam.
+            at HP and denied claims at{" "}
+            <a
+              href="https://yeam.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 decoration-rule"
+            >
+              Yeam.ai
+            </a>
+            .
           </p>
           <p>
-            In past lives I&rsquo;ve done data science at BMW, co-founded
-            OpenBio, and graduated valedictorian.
+            In past lives I&rsquo;ve done data science at BMW, co-founded{" "}
+            <a
+              href="https://open-linq.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-4 decoration-rule"
+            >
+              Open-linq
+            </a>
+            , and graduated valedictorian.
           </p>
         </div>
 

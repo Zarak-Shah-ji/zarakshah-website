@@ -74,6 +74,12 @@ a:hover {
   opacity: 0.6;
 }
 
+/* The unlayered rule above outranks Tailwind's layered `underline` utility,
+   so opt links back in explicitly. */
+a.underline {
+  text-decoration-line: underline;
+}
+
 .prose {
   max-width: 38rem;
   line-height: 1.7;

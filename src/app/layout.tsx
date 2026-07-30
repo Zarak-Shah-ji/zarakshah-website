@@ -31,12 +31,12 @@ export const metadata: Metadata = {
     template: "%s — Zarak Shah",
   },
   description:
-    "Zarak Shah — Senior Data Scientist at BMW. Builds ML systems and AI agents.",
+    "Zarak Shah — engineer and entrepreneur. Working on schematic traces at HP and denied claims at Yeam.ai.",
   metadataBase: new URL("https://zarakshah.com"),
   openGraph: {
     title: "Zarak Shah",
     description:
-      "Senior Data Scientist at BMW. Builds ML systems and AI agents.",
+      "Engineer and entrepreneur. Working on schematic traces at HP and denied claims at Yeam.ai.",
     type: "website",
   },
 };
