@@ -7,7 +7,7 @@ export default function Home() {
       <section className="prose">
         <div data-show="work">
           <p>
-            Advanced AI Scientist at HP. The work I care about most is what
+            Advanced AI Scientist at HP. The work I care most about is what
             I&rsquo;m building as co-founder of Yeam.ai and OpenBio.
           </p>
           <p>
@@ -30,8 +30,8 @@ export default function Home() {
             tools for the parts of life I&rsquo;d rather not do myself.
           </p>
           <p>
-            I train at the gym and sometimes film the journey to share on
-            Instagram — progress, workouts, and behind-the-scenes.
+            I usually go to the gym (keeps me sane), and sometimes talk about my life journey to share on
+            Instagram: progress, Kashmiri American Diaspora, workouts, and food.
           </p>
           <p style={{ color: "var(--muted)" }}>
             I write occasionally about what I&rsquo;ve learned, usually
