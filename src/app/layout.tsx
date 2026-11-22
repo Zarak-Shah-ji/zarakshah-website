@@ -30,13 +30,11 @@ export const metadata: Metadata = {
     default: "Zarak Shah",
     template: "%s — Zarak Shah",
   },
-  description:
-    "Zarak Shah — Senior Data Scientist at BMW. Builds ML systems and AI agents.",
+  description: "Engineer who likes to solve complex problems.",
   metadataBase: new URL("https://zarakshah.com"),
   openGraph: {
     title: "Zarak Shah",
-    description:
-      "Senior Data Scientist at BMW. Builds ML systems and AI agents.",
+    description: "Engineer who likes to solve complex problems.",
     type: "website",
   },
 };
